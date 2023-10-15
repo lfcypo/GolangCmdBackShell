@@ -7,7 +7,7 @@ while True:
     shell = input("shell: ->   ")
     shell = base64.b64encode(shell.encode("utf-8")).decode("utf-8")
 
-    response = requests.post(f"http://10.78.11.94:20086/run_shell?shell={shell}")
+    response = requests.post(f"http://127.0.0.1:20086/run_shell?shell={shell}")
     if response.status_code != 200:
         print("Faild")
         continue
